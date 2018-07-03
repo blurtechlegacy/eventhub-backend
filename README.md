@@ -22,7 +22,7 @@ Backend server work on port `1984`
 [![Twitter Follow](https://img.shields.io/twitter/follow/batyshkaLenin.svg?style=social&label=Follow)](https://twitter.com/batyshkaLenin)
 * **Ilya Savenkov** - *Main contributor (nope)* - [Puzovoz](https://github.com/Puzovoz)  
 
-See also the list of [contributors](https://github.com/blurtech/sphinx-backend/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/blurtech/event-sharing-backend/contributors) who participated in this project.
 
 ## License
 
