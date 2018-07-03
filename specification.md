@@ -15,6 +15,7 @@ The main functions are divided into several categories:
 **P0:**  
 1. Authentification with login and password.  
     1. Comparison of the login password set with the existing data.
+    2. If the account is not found, return a message about the need to register.  
 2. Return `tags` table  
     1. *GET* `/api/v000/tags`
     ```json5
@@ -44,7 +45,9 @@ The main functions are divided into several categories:
     ]
     ```
     2. *GET* `/api/v000/events/`  
-    Return all rows from table `events`
+    Return all rows from table `events`  
+
+4. Convert `id` primary key from *Int* to *Char*. Separate data and status label.  
 
 **P1:**
 1. Return personal data to the account  
@@ -61,5 +64,3 @@ The main functions are divided into several categories:
         }
     ]
    ```
-
-**P2:**
