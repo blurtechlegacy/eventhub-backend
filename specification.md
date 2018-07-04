@@ -37,17 +37,34 @@ The main functions are divided into several categories:
             "name": "Party in the forest", // Event name
             "description": "Party in the forest with guitar music 🎸, campfire 🔥. We might be spending the night in tents ⛺." // Event description
             "place": "54.8437876,83.0718511", // Geo coordinates
-            "tags": "1,5,2", // ids from table `tags`
-            "guests": "1,4,2,6", // ids from table `users`
+            "tags": [1,5,2], // ids from table `tags`
+            "guests": [1,4,2,6], // ids from table `users`
             "start": "2018-07-03 19:00:00", // Datetime format YYYY-MM-DD HH:MM:SS of event start
             "end": "2018-07-04 12:00:00" // Datetime format YYYY-MM-DD HH:MM:SS of event end
         }
     ]
     ```
     2. *GET* `/api/v000/events/`  
-    Return all rows from table `events`  
+    Return all rows from table `events`
 
-4. Convert `id` primary key from *Int* to *Char*. Separate data and status label.  
+4. Convert `id` primary key from *Int* to *Char*. Separate data and status label.
+5. Add new event to `events` table.
+    1. *POST* `/api/v000/events/create?host=1&name="Party in the forest"&description="blah blah"&place="54.8437876,83.0718511"&tags=1,5,2&start="blah"&end="blah"`
+    Or *POST* `/api/v000/events/create` with JSON body:
+    ```json5
+    [
+        {
+            "host": 1, // id from table `users`
+            "name": "Party in the forest", // Event name
+            "description": "Party in the forest with guitar music 🎸, campfire 🔥. We might be spending the night in tents ⛺." // Event description
+            "place": "54.8437876,83.0718511", // Geo coordinates
+            "tags": [1,5,2], // ids from table `tags`
+            "start": "2018-07-03 19:00:00", // Datetime format YYYY-MM-DD HH:MM:SS of event start
+            "end": "2018-07-04 12:00:00" // Datetime format YYYY-MM-DD HH:MM:SS of event end
+        }
+    ]
+    ```
+    2. Increase `event_count` in `tags` table by "tags" ids used in *POST* method.
 
 **P1:**
 1. Return personal data to the account  
