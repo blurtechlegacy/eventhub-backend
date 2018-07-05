@@ -28,7 +28,7 @@ The main functions are divided into several categories:
     ]
     ```
 3. Return `events` table
-    1. *GET* `/api/v000/events/1`
+    1. *GET* `/api/v000/events/{id}`
     ```json5
     [
         {
@@ -49,7 +49,7 @@ The main functions are divided into several categories:
 
 4. Convert `id` primary key from *Int* to *Char*. Separate data and status label.
 5. Add new event to `events` table.
-    1. *POST* `/api/v000/events/create?host=1&name="Party in the forest"&description="blah blah"&place="54.8437876,83.0718511"&tags=1,5,2&start="blah"&end="blah"`  
+    1. *POST* `/api/v000/events/create?host=1&name=Party+in+the+forest&description=blah+blah&place=54.8437876,83.0718511&tags=1,5,2&start=blah&end=blah`  
     Or *POST* `/api/v000/events/create` with JSON body:
     ```json5
     [
@@ -68,7 +68,7 @@ The main functions are divided into several categories:
 
 **P1:**
 1. Return personal data to the account  
-   1. *GET* `/api/v001/users/1`  
+   1. *GET* `/api/v001/users/{id}`  
    ```json5
     [
         {
