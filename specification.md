@@ -65,10 +65,8 @@ The main functions are divided into several categories:
     ]
     ```
     2. Increase `event_count` in `tags` table by "tags" ids used in *POST* method.
-
-**P1:**
-1. Return personal data to the account  
-   1. *GET* `/api/v001/users/{id}`  
+6. Return personal data to the account  
+   1. *GET* `/api/v000/users/{id}`  
    ```json5
     [
         {
@@ -81,3 +79,5 @@ The main functions are divided into several categories:
         }
     ]
    ```
+   2. *GET* `/api/v000/users/`  
+    Return all rows from table `users`
