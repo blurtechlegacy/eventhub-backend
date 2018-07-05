@@ -1,6 +1,8 @@
-package ftc.shift.sample.models;
+package tech.blur.event.sharing.models;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.List;
@@ -15,10 +17,16 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class Tag implements Serializable{
+public class Event implements Serializable{
 
     private String id;
+    private Integer host;
     private String name;
-    private Integer event_count;
+    private String description;
+    private String place;
+    private List<Integer> tags;
+    private List<Integer> guests;
+    private String start;
+    private String end;
 
 }

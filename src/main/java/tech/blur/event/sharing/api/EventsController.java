@@ -1,8 +1,8 @@
-package ftc.shift.sample.api;
+package tech.blur.event.sharing.api;
 
 
-import ftc.shift.sample.models.Event;
-import ftc.shift.sample.services.EventService;
+import tech.blur.event.sharing.models.Event;
+import tech.blur.event.sharing.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

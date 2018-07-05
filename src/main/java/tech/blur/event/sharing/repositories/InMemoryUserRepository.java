@@ -1,6 +1,6 @@
-package ftc.shift.sample.repositories;
+package tech.blur.event.sharing.repositories;
 
-import ftc.shift.sample.models.User;
+import tech.blur.event.sharing.models.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;

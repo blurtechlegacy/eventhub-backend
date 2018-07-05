@@ -1,7 +1,7 @@
-package ftc.shift.sample.services;
+package tech.blur.event.sharing.services;
 
-import ftc.shift.sample.models.Event;
-import ftc.shift.sample.repositories.EventRepository;
+import tech.blur.event.sharing.models.Event;
+import tech.blur.event.sharing.repositories.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

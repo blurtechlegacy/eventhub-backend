@@ -1,4 +1,4 @@
-package ftc.shift.sample.models;
+package tech.blur.event.sharing.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

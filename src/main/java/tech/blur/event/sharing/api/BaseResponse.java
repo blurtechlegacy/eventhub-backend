@@ -1,4 +1,4 @@
-package ftc.shift.sample.api;
+package tech.blur.event.sharing.api;
 
 import lombok.Data;
 

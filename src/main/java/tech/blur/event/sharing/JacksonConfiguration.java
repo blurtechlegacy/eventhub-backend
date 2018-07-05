@@ -1,4 +1,4 @@
-package ftc.shift.sample;
+package tech.blur.event.sharing;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;

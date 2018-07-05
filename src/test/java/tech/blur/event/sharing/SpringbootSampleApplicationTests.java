@@ -1,4 +1,4 @@
-package ftc.shift.sample;
+package tech.blur.event.sharing;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

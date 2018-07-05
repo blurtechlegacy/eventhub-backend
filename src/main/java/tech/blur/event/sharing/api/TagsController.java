@@ -1,8 +1,8 @@
-package ftc.shift.sample.api;
+package tech.blur.event.sharing.api;
 
 
-import ftc.shift.sample.services.TagService;
-import ftc.shift.sample.models.Tag;
+import tech.blur.event.sharing.services.TagService;
+import tech.blur.event.sharing.models.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
