@@ -5,14 +5,9 @@
 It is a project in borders of School of Information and Financial Technologies in NSU.
 
 ## Getting Started
-Download and install LTS Version nodejs.org and [wampserver.com](http://www.wampserver.com/en/#download-wrapper) for you OS
-  - Start WAMP server
-  - Go to http://localhost/phpmyadmin/. Enter login "root" and empty password. 
-  - Create new database with name event-sharing
-  - Execute SQL-request from INIT.sql file
-  - Enter to command line commands:
-  - npm install
-  - npm start
+  - Clone repository  
+  - Go to console 
+  - Enter `gradlew bootRun`  
   - Cry, bitch!  
 
 Backend server work on port `1984`
