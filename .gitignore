@@ -1,3 +1,9 @@
-node_modules
-package-lock.json
-Projects.md
+.idea/
+build/
+out/
+.gradle
+backend.iml
+bin/
+*.iml
+*.iws
+*.log
