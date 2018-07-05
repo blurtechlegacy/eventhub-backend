@@ -1,7 +1,6 @@
 package ftc.shift.sample.repositories;
 
 import ftc.shift.sample.models.Tag;
-
 import java.util.Collection;
 
 /**
