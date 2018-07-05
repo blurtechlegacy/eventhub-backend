@@ -17,7 +17,7 @@ public class TagService {
     this.tagRepository = tagRepository;
   }
 
-  public Tag provideTag(Integer id) {
+  public Tag provideTag(String id) {
     return tagRepository.fetchTag(id);
   }
 
@@ -26,7 +26,7 @@ public class TagService {
     return tag;
   }
 
-  public void deleteTag(Integer id) {
+  public void deleteTag(String id) {
     tagRepository.deleteTag(id);
   }
 

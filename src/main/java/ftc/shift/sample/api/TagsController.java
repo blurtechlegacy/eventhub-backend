@@ -1,7 +1,7 @@
 package ftc.shift.sample.api;
 
 
-import ftc.shift.sample.services.BookService;
+import ftc.shift.sample.services.TagService;
 import ftc.shift.sample.models.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -42,7 +42,7 @@ public class TagsController {
 
   @PostMapping(TAGS_PATH)
   public @ResponseBody
-  BaseResponse<Tag> createBook(@RequestBody Tag tag) {
+  BaseResponse<Tag> createTag(@RequestBody Tag tag) {
     BaseResponse<Tag> response = new BaseResponse<>();
     Tag result = service.createTag(tag);
     response.setData(result);
@@ -58,9 +58,9 @@ public class TagsController {
 
   @PatchMapping(TAGS_PATH + "/{id}")
   public @ResponseBody
-  BaseResponse<Tag> updateBook(@PathVariable String id, @RequestBody Tag tag) {
+  BaseResponse<Tag> updateTag(@PathVariable String id, @RequestBody Tag tag) {
     BaseResponse<Tag> response = new BaseResponse<>();
-    Tag result = service.updateBook(tag);
+    Tag result = service.updateTag(tag);
     response.setData(result);
     return response;
   }
