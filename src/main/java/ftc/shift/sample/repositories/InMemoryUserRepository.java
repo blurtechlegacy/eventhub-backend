@@ -3,9 +3,7 @@ package ftc.shift.sample.repositories;
 import ftc.shift.sample.models.User;
 import org.springframework.stereotype.Repository;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Реализиция, хранящая все данные в памяти приложения
