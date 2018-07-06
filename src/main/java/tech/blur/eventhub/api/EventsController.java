@@ -16,6 +16,7 @@ public class EventsController {
   @Autowired
   private EventService service;
 
+  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @GetMapping(EVENTS_PATH + "/{id}")
   public @ResponseBody
   BaseResponse<Event> readEvent(@PathVariable String id) {
@@ -31,6 +32,7 @@ public class EventsController {
     return response;
   }
 
+  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @GetMapping(EVENTS_PATH)
   public @ResponseBody
   BaseResponse<Collection<Event>> listEvents() {
@@ -40,6 +42,7 @@ public class EventsController {
     return response;
   }
 
+  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @PostMapping(EVENTS_PATH)
   public @ResponseBody
   BaseResponse<Event> createEvent(@RequestBody Event event) {
@@ -49,6 +52,7 @@ public class EventsController {
     return response;
   }
 
+  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @DeleteMapping(EVENTS_PATH + "/{id}")
   public @ResponseBody
   BaseResponse deleteEvent(@PathVariable String id) {
@@ -56,6 +60,7 @@ public class EventsController {
     return new BaseResponse(); //нет тела, только статус
   }
 
+  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @PatchMapping(EVENTS_PATH + "/{id}")
   public @ResponseBody
   BaseResponse<Event> updateEvent(@PathVariable String id, @RequestBody Event event) {
