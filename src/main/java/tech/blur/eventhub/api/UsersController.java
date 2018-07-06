@@ -3,6 +3,7 @@ package tech.blur.eventhub.api;
 
 import tech.blur.eventhub.models.User;
 import tech.blur.eventhub.services.UserService;
+import tech.blur.eventhub.filter.CorsFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,6 @@ public class UsersController {
   @Autowired
   private UserService service;
 
-  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @GetMapping(USERS_PATH + "/{id}")
   public @ResponseBody
   BaseResponse<User> readUser(@PathVariable String id) {
@@ -32,7 +32,6 @@ public class UsersController {
     return response;
   }
 
-  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @GetMapping(USERS_PATH)
   public @ResponseBody
   BaseResponse<Collection<User>> listUsers() {
@@ -42,7 +41,6 @@ public class UsersController {
     return response;
   }
 
-  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @PostMapping(USERS_PATH)
   public @ResponseBody
   BaseResponse<User> createUser(@RequestBody User user) {
@@ -52,7 +50,6 @@ public class UsersController {
     return response;
   }
 
-  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @DeleteMapping(USERS_PATH + "/{id}")
   public @ResponseBody
   BaseResponse deleteUser(@PathVariable String id) {
@@ -60,7 +57,6 @@ public class UsersController {
     return new BaseResponse(); //нет тела, только статус
   }
 
-  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @PatchMapping(USERS_PATH + "/{id}")
   public @ResponseBody
   BaseResponse<User> updateUser(@PathVariable String id, @RequestBody User user) {

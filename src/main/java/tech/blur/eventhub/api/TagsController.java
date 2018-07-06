@@ -3,9 +3,11 @@ package tech.blur.eventhub.api;
 
 import tech.blur.eventhub.services.TagService;
 import tech.blur.eventhub.models.Tag;
+import tech.blur.eventhub.filter.CorsFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.ws.spi.http.HttpContext;
 import java.util.Collection;
 
 @RestController
@@ -16,7 +18,6 @@ public class TagsController {
   @Autowired
   private TagService service;
 
-  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @GetMapping(TAGS_PATH + "/{id}")
   public @ResponseBody
   BaseResponse<Tag> readTag(@PathVariable String id) {
@@ -32,7 +33,6 @@ public class TagsController {
     return response;
   }
 
-  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @GetMapping(TAGS_PATH)
   public @ResponseBody
   BaseResponse<Collection<Tag>> listTags() {
@@ -42,7 +42,6 @@ public class TagsController {
     return response;
   }
 
-  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @PostMapping(TAGS_PATH)
   public @ResponseBody
   BaseResponse<Tag> createTag(@RequestBody Tag tag) {
@@ -52,7 +51,6 @@ public class TagsController {
     return response;
   }
 
-  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @DeleteMapping(TAGS_PATH + "/{id}")
   public @ResponseBody
   BaseResponse deleteTag(@PathVariable String id) {
@@ -60,7 +58,6 @@ public class TagsController {
     return new BaseResponse(); //нет тела, только статус
   }
 
-  @CrossOrigin(origins = "http://104.41.217.114:1984")
   @PatchMapping(TAGS_PATH + "/{id}")
   public @ResponseBody
   BaseResponse<Tag> updateTag(@PathVariable String id, @RequestBody Tag tag) {
