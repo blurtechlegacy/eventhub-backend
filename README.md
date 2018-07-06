@@ -1,6 +1,7 @@
 # Eventhub
+[![GitHub issues](https://img.shields.io/github/issues/blurtech/eventhub-backend.svg)](https://github.com/blurtech/eventhub-backend/issues)  [![HitCount](http://hits.dwyl.io/blurtech/eventhub-backend.svg)](http://hits.dwyl.io/blurtech/eventhub-backend)  
 
-[![GitHub issues](https://img.shields.io/github/issues/blurtech/event-sharing-backend.svg)](https://github.com/blurtech/event-sharing-backend/issues)  [![HitCount](http://hits.dwyl.io/blurtech/event-sharing-backend.svg)](http://hits.dwyl.io/blurtech/event-sharing-backend)  
+> Don't look, act!  
 
 It is a project in borders of School of Information and Financial Technologies in NSU.
 
