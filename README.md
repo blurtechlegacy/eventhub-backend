@@ -1,7 +1,7 @@
 # Eventhub
 [![GitHub issues](https://img.shields.io/github/issues/blurtech/eventhub-backend.svg)](https://github.com/blurtech/eventhub-backend/issues)  [![HitCount](http://hits.dwyl.io/blurtech/eventhub-backend.svg)](http://hits.dwyl.io/blurtech/eventhub-backend)  
 
-![Eventhub](https://pp.userapi.com/c623900/v623900143/173e46/ROGLCdEmR3s.jpg)  
+![Eventhub](https://pp.userapi.com/c847020/v847020208/9800e/BJ8SGn4Zx7s.jpg)  
 
 > Don't look, act!  
 
