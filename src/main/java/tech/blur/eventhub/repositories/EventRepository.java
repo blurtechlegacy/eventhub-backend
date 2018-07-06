@@ -1,6 +1,6 @@
-package tech.blur.event.sharing.repositories;
+package tech.blur.eventhub.repositories;
 
-import tech.blur.event.sharing.models.Event;
+import tech.blur.eventhub.models.Event;
 
 import java.util.Collection;
 

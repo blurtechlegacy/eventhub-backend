@@ -1,6 +1,6 @@
-package tech.blur.event.sharing.repositories;
+package tech.blur.eventhub.repositories;
 
-import tech.blur.event.sharing.models.User;
+import tech.blur.eventhub.models.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;

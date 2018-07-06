@@ -1,4 +1,4 @@
-package tech.blur.event.sharing;
+package tech.blur.eventhub;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

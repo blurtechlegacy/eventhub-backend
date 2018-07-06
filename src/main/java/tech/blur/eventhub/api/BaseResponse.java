@@ -1,4 +1,4 @@
-package tech.blur.event.sharing.api;
+package tech.blur.eventhub.api;
 
 import lombok.Data;
 

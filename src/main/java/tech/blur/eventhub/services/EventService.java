@@ -1,7 +1,7 @@
-package tech.blur.event.sharing.services;
+package tech.blur.eventhub.services;
 
-import tech.blur.event.sharing.models.Event;
-import tech.blur.event.sharing.repositories.EventRepository;
+import tech.blur.eventhub.models.Event;
+import tech.blur.eventhub.repositories.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

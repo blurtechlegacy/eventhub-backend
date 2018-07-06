@@ -1,4 +1,4 @@
-package tech.blur.event.sharing;
+package tech.blur.eventhub;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;

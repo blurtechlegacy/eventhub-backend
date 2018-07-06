@@ -1,11 +1,10 @@
-package tech.blur.event.sharing.models;
+package tech.blur.eventhub.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * Lombok (https://projectlombok.org/) инструмент, позволяющий не писать геттеры-сеттеры, конструкторы и тд. Они генерируются автоматом.
@@ -17,16 +16,13 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class Event implements Serializable{
+public class User implements Serializable{
 
     private String id;
-    private Integer host;
+    private String login;
+    private String password;
     private String name;
-    private String description;
-    private String place;
-    private List<Integer> tags;
-    private List<Integer> guests;
-    private String start;
-    private String end;
+    private String birthday;
+    private Integer sex;
 
 }

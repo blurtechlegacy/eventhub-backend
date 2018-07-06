@@ -1,4 +1,4 @@
-# Event-sharing 
+# Eventhub
 
 [![GitHub issues](https://img.shields.io/github/issues/blurtech/event-sharing-backend.svg)](https://github.com/blurtech/event-sharing-backend/issues)  [![HitCount](http://hits.dwyl.io/blurtech/event-sharing-backend.svg)](http://hits.dwyl.io/blurtech/event-sharing-backend)  
 

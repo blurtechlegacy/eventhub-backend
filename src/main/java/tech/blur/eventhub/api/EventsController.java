@@ -1,8 +1,8 @@
-package tech.blur.event.sharing.api;
+package tech.blur.eventhub.api;
 
 
-import tech.blur.event.sharing.models.Event;
-import tech.blur.event.sharing.services.EventService;
+import tech.blur.eventhub.models.Event;
+import tech.blur.eventhub.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

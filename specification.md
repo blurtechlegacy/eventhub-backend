@@ -1,4 +1,4 @@
-# Event-sharing
+# Eventhub
 **Objective**: Provide a convenient platform for finding entertainment with different people.  
 **Solution**: Create a platform where everyone can create an event and subscribe to other.  
 
