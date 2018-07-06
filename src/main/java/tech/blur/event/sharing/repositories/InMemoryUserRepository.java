@@ -15,7 +15,7 @@ public class InMemoryUserRepository implements UserRepository {
 
     public InMemoryUserRepository() {
         userCache.put("1", new User("1", "MacOSO", "verystrongpassword", "Alexandr", "1999-10-26", 1));
-        userCache.put("2", new User("2", "SrgGrch", "qwer2017", "Sergey", "NULL", 1));
+        userCache.put("2", new User("2", "SrgGrch", "qwer2017", "Sergey", "1999-09-28", 1));
     }
 
 
