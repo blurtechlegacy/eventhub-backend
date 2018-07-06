@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "fa61581f-1e2a-401d-83cc-a3301344b30e",
+		"name": "eventhub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/v001/users/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:1984/api/v001/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1984",
+					"path": [
+						"api",
+						"v001",
+						"users",
+						""
+					]
+				},
+				"description": "Получение списка книг"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v001/users/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:1984/api/v001/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1984",
+					"path": [
+						"api",
+						"v001",
+						"users",
+						"1"
+					]
+				},
+				"description": "Получение книги по id"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v001/users/{id}",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"1\",\n   \"login\": \"Puzovoz\",\n    \"password\": \"password1\",\n    \"name\": \"Ilya\",\n    \"birthday\": \"1999-05-06\",\n    \"sex\": null \n}"
+				},
+				"url": {
+					"raw": "http://localhost:1984/api/v001/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1984",
+					"path": [
+						"api",
+						"v001",
+						"users",
+						"1"
+					]
+				},
+				"description": "Обновление данных книги по id"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v001/users/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1984/api/v001/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1984",
+					"path": [
+						"api",
+						"v001",
+						"users",
+						"1"
+					]
+				},
+				"description": "Удаление книги по id"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v001/users/{id}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\": \"Puzovoz\",\n    \"password\": \"password1\",\n    \"name\": \"Ilya\",\n    \"birthday\": \"1999-05-06\",\n    \"sex\": null\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1984/api/v001/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1984",
+					"path": [
+						"api",
+						"v001",
+						"users"
+					]
+				},
+				"description": "Создание новой записи"
+			},
+			"response": []
+		}
+	]
+}
