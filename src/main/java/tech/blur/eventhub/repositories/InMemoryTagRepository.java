@@ -14,8 +14,8 @@ public class InMemoryTagRepository implements TagRepository {
     private Map<String, Tag> tagCache = new HashMap<>();
 
     public InMemoryTagRepository() {
-        tagCache.put("1", new Tag("1", "tag1", 0));
-        tagCache.put("2", new Tag("2", "tag2", 0));
+        tagCache.put("1", new Tag("1", "mathematics", 0));
+        tagCache.put("2", new Tag("2", "javascript", 0));
     }
 
 

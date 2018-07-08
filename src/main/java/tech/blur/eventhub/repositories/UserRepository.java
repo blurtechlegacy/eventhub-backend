@@ -15,4 +15,5 @@ public interface UserRepository {
   User createUser(User user);
 
   Collection<User> getAllUsers();
+
 }
