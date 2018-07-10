@@ -1,5 +1,6 @@
 package tech.blur.eventhub.services;
 
+import tech.blur.eventhub.models.UserLoginPass;
 import tech.blur.eventhub.models.User;
 import tech.blur.eventhub.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,9 @@ public class UserService {
     userRepository.deleteUser(id);
   }
 
+  public User authUser (UserLoginPass userLoginPass){
+    return userRepository.authUser(userLoginPass);
+  }
 
   public User createUser(User user) {
     userRepository.createUser(user);
