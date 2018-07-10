@@ -65,5 +65,4 @@ public class UsersController {
     response.setData(result);
     return response;
   }
-
 }
