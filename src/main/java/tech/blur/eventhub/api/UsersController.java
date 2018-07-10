@@ -55,7 +55,7 @@ public class UsersController {
   BaseResponse<User> authUser(@RequestBody UserLoginPass userLoginPass){
     BaseResponse<User> response = new BaseResponse<>();
     User user = service.authUser(userLoginPass);
-    if (null == userLoginPass) {
+    if (null == user) {
       response.setStatus("USER_NOT_EXIST");  //для статусов  можно сделать отдельные Enum-ы или вынести как строковые константы
       response.setMessage("Wrong password!");
     } else {
