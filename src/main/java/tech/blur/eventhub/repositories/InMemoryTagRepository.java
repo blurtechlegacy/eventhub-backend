@@ -37,7 +37,7 @@ public class InMemoryTagRepository implements TagRepository {
 
     @Override
     public Tag createTag(final Tag tag) {
-        tag.setId(String.valueOf(System.currentTimeMillis()));  //очень плохой способ генерировать Id, тут только для примера
+        tag.setId(Integer.toString(tagCache.size()+1));
         tagCache.put(tag.getId(), tag);
         return tag;
     }

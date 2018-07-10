@@ -37,7 +37,7 @@ public class InMemoryEventRepository implements EventRepository {
 
     @Override
     public Event createEvent(final Event event) {
-        event.setId(String.valueOf(System.currentTimeMillis()));  //очень плохой способ генерировать Id, тут только для примера
+        event.setId(Integer.toString(eventCache.size()+1));
         eventCache.put(event.getId(), event);
         return event;
     }

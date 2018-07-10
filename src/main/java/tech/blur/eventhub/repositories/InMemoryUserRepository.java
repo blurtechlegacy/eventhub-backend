@@ -37,7 +37,7 @@ public class InMemoryUserRepository implements UserRepository {
 
     @Override
     public User createUser(final User user) {
-        user.setId(String.valueOf(System.currentTimeMillis()));  //очень плохой способ генерировать Id, тут только для примера
+        user.setId(Integer.toString(userCache.size()+1));
         userCache.put(user.getId(), user);
         return user;
     }
