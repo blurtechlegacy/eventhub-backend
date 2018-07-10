@@ -1,9 +1,9 @@
 package tech.blur.eventhub.api;
 
 
+import tech.blur.eventhub.models.UserLoginPass;
 import tech.blur.eventhub.models.User;
 import tech.blur.eventhub.services.UserService;
-import tech.blur.eventhub.filter.CorsFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -47,6 +47,21 @@ public class UsersController {
     BaseResponse<User> response = new BaseResponse<>();
     User result = service.createUser(user);
     response.setData(result);
+    return response;
+  }
+
+  @PostMapping(USERS_PATH+"/auth")
+  public @ResponseBody
+  BaseResponse<User> authUser(@RequestBody UserLoginPass userLoginPass){
+    BaseResponse<User> response = new BaseResponse<>();
+    User user = service.authUser(userLoginPass);
+    if (null == user) {
+      response.setStatus("USER_NOT_EXIST");  //для статусов  можно сделать отдельные Enum-ы или вынести как строковые константы
+      response.setMessage("Wrong password!");
+    } else {
+      response.setData(user);
+    }
+
     return response;
   }
 
