@@ -12,15 +12,15 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class UserLoginPass implements Serializable {
     private String login;
-    private String pass;
+    private String password;
 
     public int hashCode(){
-        return (pass+login).hashCode();
+        return (password+login).hashCode();
     }
 
     public boolean equals(Object o){
         if(o instanceof UserLoginPass){
-            return pass.equals(((UserLoginPass)o).pass)||login.equals(((UserLoginPass)o).login);
+            return password.equals(((UserLoginPass)o).password)||login.equals(((UserLoginPass)o).login);
         }
         return false;
     }
