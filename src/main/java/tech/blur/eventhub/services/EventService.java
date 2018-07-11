@@ -5,6 +5,7 @@ import tech.blur.eventhub.repositories.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Service
@@ -30,6 +31,9 @@ public class EventService {
     eventRepository.deleteEvent(id);
   }
 
+  public ArrayList<Event> searchEvents(String name){
+    return eventRepository.searchEvent(name);
+  }
 
   public Event createEvent(Event event) {
     eventRepository.createEvent(event);

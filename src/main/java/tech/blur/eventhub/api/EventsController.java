@@ -7,6 +7,7 @@ import tech.blur.eventhub.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 @RestController
@@ -38,6 +39,20 @@ public class EventsController {
     BaseResponse<Collection<Event>> response = new BaseResponse<>();
     Collection<Event> result = service.provideEvents();
     response.setData(result);
+    return response;
+  }
+
+  @GetMapping(EVENTS_PATH+ "/search/{name}")
+  public @ResponseBody
+  BaseResponse<ArrayList<Event>> searchEvents(@PathVariable String name) {
+    BaseResponse<ArrayList<Event>> response = new BaseResponse<>();
+    ArrayList<Event> result = service.searchEvents(name);
+      if (result.isEmpty()) {
+          response.setStatus("EVENT_NOT_EXIST");  //для статусов  можно сделать отдельные Enum-ы или вынести как строковые константы
+          response.setMessage("Events not found!");
+      } else {
+          response.setData(result);
+      }
     return response;
   }
 
