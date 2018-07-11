@@ -20,7 +20,7 @@ import java.util.List;
 public class Event implements Serializable{
 
     private String id;
-    private Integer host;
+    private String host;
     private String host_name;
     private String name;
     private String description;
