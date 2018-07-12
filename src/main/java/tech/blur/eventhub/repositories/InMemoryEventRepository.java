@@ -87,7 +87,6 @@ public class InMemoryEventRepository implements EventRepository {
     @Override
     public Event createEvent(final Event event) {
         event.setId(Integer.toString(eventCache.size()+1));
-        eventCacheSearch.put(event.getName(), event);
         eventCache.put(event.getId(), event);
         return event;
     }
