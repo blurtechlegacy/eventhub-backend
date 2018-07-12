@@ -12,7 +12,6 @@ import java.util.*;
 public class InMemoryEventRepository implements EventRepository {
 
     private Map<String, Event> eventCache = new HashMap<>();
-    private Map<String, Event> eventCacheSearch = new HashMap<>();
     public InMemoryEventRepository() {
         eventCache.put("1", new Event("1", "2", "SrgGrch", "Two girls one map",
                 "Double math analysis without triple integration", "54.9869693,82.9131314",
