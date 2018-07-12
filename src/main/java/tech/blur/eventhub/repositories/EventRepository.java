@@ -13,6 +13,8 @@ public interface EventRepository {
 
   ArrayList<Event> searchEvent(String name);
 
+  ArrayList<Event> getEventsByUser(String host);
+
   void deleteEvent(String id);
 
   Event createEvent(Event event);
