@@ -93,6 +93,19 @@ public class EventsController {
     return response;
   }
 
+  @GetMapping(EVENTS_PATH + "/bytag/{id}")
+  public @ResponseBody
+  BaseResponse<ArrayList<Event>> getEventsByTag (@PathVariable String id) {
+    BaseResponse<ArrayList<Event>> response = new BaseResponse<>();
+    ArrayList<Event> result = service.getEventsByTag(id);
+    if (result.isEmpty()) {
+      response.setStatus("EVENT_NOT_EXIST");  //для статусов  можно сделать отдельные Enum-ы или вынести как строковые константы
+      response.setMessage("Events not found!");
+    } else {
+      response.setData(result);
+    }
+    return response;
+  }
   @DeleteMapping(EVENTS_PATH + "/{id}")
   public @ResponseBody
   BaseResponse deleteEvent(@PathVariable String id) {

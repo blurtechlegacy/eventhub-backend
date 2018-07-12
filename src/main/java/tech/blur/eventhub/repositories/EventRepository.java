@@ -17,6 +17,8 @@ public interface EventRepository {
 
   ArrayList<Event> getAssignedEvents(String id);
 
+  ArrayList<Event> getEventsByTag(String id);
+
   void deleteEvent(String id);
 
   Event createEvent(Event event);

@@ -70,6 +70,17 @@ public class InMemoryEventRepository implements EventRepository {
     }
 
     @Override
+    public ArrayList<Event> getEventsByTag(String id) {
+        ArrayList<Event> events = new ArrayList<>();
+        for (int i = 1; i<=eventCache.size(); i++){
+            if (eventCache.get(Integer.toString(i)).getTags().contains(id)){
+                events.add(eventCache.get(Integer.toString(i)));
+            }
+        }
+        return events;
+    }
+
+    @Override
     public void deleteEvent(final String id) {
         eventCache.remove(id);
     }

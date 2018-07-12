@@ -48,6 +48,10 @@ public class EventService {
     return eventRepository.getAssignedEvents(id);
   }
 
+  public ArrayList<Event> getEventsByTag(String id){
+    return eventRepository.getEventsByTag(id);
+  }
+
   public Collection<Event> provideEvents() {
     return eventRepository.getAllEvents();
   }
