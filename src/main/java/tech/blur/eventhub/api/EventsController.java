@@ -2,7 +2,6 @@ package tech.blur.eventhub.api;
 
 
 import tech.blur.eventhub.models.Event;
-import tech.blur.eventhub.filter.CorsFilter;
 import tech.blur.eventhub.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +14,7 @@ public class EventsController {
 
   private static final String EVENTS_PATH = Resources.API_PREFIX + "events";
 
+  @SuppressWarnings("SpringJavaAutowiredFieldsWarningInspection")
   @Autowired
   private EventService service;
 
