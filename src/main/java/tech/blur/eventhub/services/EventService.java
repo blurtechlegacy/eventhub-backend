@@ -44,6 +44,10 @@ public class EventService {
     return event;
   }
 
+  public ArrayList<Event> getAssignedEvents(String id) {
+    return eventRepository.getAssignedEvents(id);
+  }
+
   public Collection<Event> provideEvents() {
     return eventRepository.getAllEvents();
   }

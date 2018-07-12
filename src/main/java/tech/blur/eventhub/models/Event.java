@@ -25,8 +25,8 @@ public class Event implements Serializable{
     private String name;
     private String description;
     private String place;
-    private List<Integer> tags;
-    private List<Integer> guests;
+    private List<String> tags;
+    private List<String> guests;
     private String start;
     private String end;
 
