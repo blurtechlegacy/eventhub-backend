@@ -35,6 +35,10 @@ public class EventService {
     return eventRepository.searchEvent(name);
   }
 
+  public ArrayList<Event> getEventsByUser(String host){
+    return eventRepository.getEventsByUser(host);
+  }
+
   public Event createEvent(Event event) {
     eventRepository.createEvent(event);
     return event;

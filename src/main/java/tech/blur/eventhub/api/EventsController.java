@@ -56,6 +56,20 @@ public class EventsController {
     return response;
   }
 
+  @GetMapping(EVENTS_PATH + "/byuser/{host}")
+  public @ResponseBody
+  BaseResponse<ArrayList<Event>> getEventsByUser(@PathVariable String host){
+    BaseResponse<ArrayList<Event>> response = new BaseResponse<>();
+    ArrayList<Event> result = service.getEventsByUser(host);
+    if (result.isEmpty()) {
+      response.setStatus("EVENT_NOT_EXIST");  //для статусов  можно сделать отдельные Enum-ы или вынести как строковые константы
+      response.setMessage("Events not found!");
+    } else {
+      response.setData(result);
+    }
+    return response;
+  }
+
   @PostMapping(EVENTS_PATH)
   public @ResponseBody
   BaseResponse<Event> createEvent(@RequestBody Event event) {
