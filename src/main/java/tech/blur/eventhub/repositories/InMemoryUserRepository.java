@@ -53,6 +53,7 @@ public class InMemoryUserRepository implements UserRepository {
     public User createUser(final User user) {
         user.setId(Integer.toString(userCache.size()+1));
         userCache.put(user.getId(), user);
+        userLoginPass.put(new UserLoginPass(user.getLogin(), user.getPassword()), user);
         return user;
     }
 
