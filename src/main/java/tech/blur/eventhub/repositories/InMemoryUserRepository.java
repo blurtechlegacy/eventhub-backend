@@ -25,7 +25,7 @@ public class InMemoryUserRepository implements UserRepository {
                 "1999-11-22", 1));
         userCache.put("4", new User("4", "1", "1", "Матвей",
                 "1999-04-20", 1));
-        userCache.put("5", new User("5", "masanya99", "ilovekonnorrA9", "Маша",
+        userCache.put("5", new User("5", "28StabWounds", "ilovekonnorrA9", "Маша",
                 "1999-04-10", 0));
         userCache.put("6", new User("6", "Puzovoz", "pythonmylife", "Илюша",
                 "1999-05-06", 1));
@@ -39,7 +39,7 @@ public class InMemoryUserRepository implements UserRepository {
                 "1999-11-22", 1));
         userLoginPass.put(new UserLoginPass("1", "1"), new User("4", "1", "1", "Матвей",
                 "1999-04-20", 1));
-        userLoginPass.put(new UserLoginPass("masanya99", "ilovekonnorrA9"), new User("5", "masanya99", "ilovekonnorrA9", "Маша",
+        userLoginPass.put(new UserLoginPass("28StabWounds", "ilovekonnorrA9"), new User("5", "masanya99", "ilovekonnorrA9", "Маша",
                 "1999-04-10", 0));
         userLoginPass.put(new UserLoginPass("Puzovoz", "pythonmylife"), new User("6", "Puzovoz", "pythonmylife", "Илюша",
                 "1999-05-06", 1));
