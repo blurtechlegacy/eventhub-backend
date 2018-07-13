@@ -3,8 +3,152 @@ HOST: 104.41.217.114:1984/api/v001
 
 # Eventhub
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+**Objective**: Provide a convenient platform for finding entertainment with different people.  
+**Solution**: Create a platform where everyone can create an event and subscribe to other.  
 
+The product can be technically divided into 3 parts: an android application, a web application, a server (backend).
+
+## Events Collection [/events]
+
+### List All Events [GET]
+
++ Response 200 (application/json)
+
+        {
+            "status": "OK",
+            "data": [
+                {
+                    "id": "1",
+                    "host": "2",
+                    "host_name": "SrgGrch",
+                    "name": "Two girls one map",
+                    "description": "Double math analysis without triple integration",
+                    "place": "54.9869693,82.9131314",
+                    "tags": ["1", "5", "2"],
+                    "guests": ["1", "4", "2", "6"],
+                    "start": "1531440000000",
+                    "end": "1531108800000"
+                },
+                {
+                    "id": "2",
+                    "host": "1",
+                    "host_name": "MacOSO",
+                    "name": "Mourning",
+                    "description": "In memory of good API on JS",
+                    "place": "54.8437635,83.0891522",
+                    "tags": ["5", "2"],
+                    "guests": ["1", "2"],
+                    "start": "1531440000000",
+                    "end": "1531108800000"
+                }
+            ]
+        }
+
+### Get Event by Id [GET/events/1]
+
++ Response 200 (application/json)
+
+        {
+            "status": "OK",
+            "data": [
+                {
+                    "id": "1",
+                    "host": "2",
+                    "host_name": "SrgGrch",
+                    "name": "Two girls one map",
+                    "description": "Double math analysis without triple integration",
+                    "place": "54.9869693,82.9131314",
+                    "tags": ["1", "5", "2"],
+                    "guests": ["1", "4", "2", "6"],
+                    "start": "1531440000000",
+                    "end": "1531108800000"
+                }
+            ]
+        }
+
+### Delete Event by Id [DELETE/events/3]
+
++ Response 200 (application/json)
+
+            {
+                "status": "OK",
+            }
+
+### Update User by Id [PUT/events/1]
+
++ Response 200 (application/json)
+
+            {
+                "host_name": "I'am a Gay"
+            }
+            
+### Assign User to Event [POST/events/assign]
+
++ Request (application/json)
+
+            {
+                "user_id":  "1",
+                "event_id": "2"
+            }
+            
++ Response 201 (application/json)
+
+    + Body
+
+            {
+              "status": "OK",
+                "data": {
+                        "id": "2",
+                        "host": "2",
+                        "host_name": "SrgGrch",
+                        "name": "Two girls one map",
+                        "description": "Double math analysis without triple integration",
+                        "place": "54.9869693,82.9131314",
+                        "tags": ["1", "5", "2"],
+                        "guests": ["1", "4", "2", "6"],
+                        "start": "1531440000000",
+                        "end": "1531108800000"
+                }
+            }
+
+### Create New Event [POST]
+
++ Request (application/json)
+
+        {
+            "host": "2",
+            "host_name": "SrgGrch",
+            "name": "Two girls one map",
+            "description": "Double math analysis without triple integration",
+            "place": "54.9869693,82.9131314",
+            "tags": ["1", "5", "2"],
+            "guests": ["1", "4", "2", "6"],
+            "start": "1531440000000",
+            "end": "1531108800000"
+        }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+              "status": "OK",
+                "data": [
+                    {
+                        "id": "1",
+                        "host": "2",
+                        "host_name": "SrgGrch",
+                        "name": "Two girls one map",
+                        "description": "Double math analysis without triple integration",
+                        "place": "54.9869693,82.9131314",
+                        "tags": ["1", "5", "2"],
+                        "guests": ["1", "4", "2", "6"],
+                        "start": "1531440000000",
+                        "end": "1531108800000"
+                    }
+                ]
+            }
+        
 ## Users Collection [/users]
 
 ### List All Users [GET]
@@ -58,8 +202,16 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             {
                 "status": "OK",
             }
+
+### Update User by Id [PUT/users/2]
+
++ Response 200 (application/json)
+
+            {
+                "name": "I'am a Gay"
+            }
         
-### Create a New User [POST]
+### Create New User [POST]
 
 + Request (application/json)
 
@@ -89,7 +241,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                 ]
             }
 
-### Authentification User [POST/users/auth]
+### User Authentification [POST/users/auth]
 
 + Request (application/json)
 
