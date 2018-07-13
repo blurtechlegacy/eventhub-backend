@@ -14,10 +14,10 @@ public class InMemoryEventRepository implements EventRepository {
 
     private Map<String, Event> eventCache = new HashMap<>();
     public InMemoryEventRepository() {
-        eventCache.put("1", new Event("1", "2", "SrgGrch", "Two girls one map",
-                "Double math analysis without triple integration", "54.9869693,82.9131314",
-                new ArrayList(Arrays.asList("1","5","2")), new ArrayList(Arrays.asList("1","4","2","6")),"1531440000000",
-                "1531108800000"));
+        eventCache.put("1", new Event("1", "2", "SrgGrch", "Человек-муравей и Оса",
+                "Собираемся за 20 минут до сеанса возле Киносити в Сибирском молле", "54.8479374,82.9584873",
+                new ArrayList(Arrays.asList("1")), new ArrayList(Arrays.asList("1")),"1531907100",
+                "1531915380"));
         eventCache.put("2", new Event("2",  "1", "MacOSO", "Mourning",
                 "In memory of good API on JS", "54.8437635,83.0891522",
                 new ArrayList(Arrays.asList("5","2")), new ArrayList(Arrays.asList("1")),"1531440000000",
