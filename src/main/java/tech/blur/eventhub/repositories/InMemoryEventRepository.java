@@ -15,7 +15,7 @@ public class InMemoryEventRepository implements EventRepository {
     private Map<String, Event> eventCache = new HashMap<>();
     public InMemoryEventRepository() {
         eventCache.put("1", new Event("1", "2", "SrgGrch", "Человек-муравей и Оса",
-                "Собираемся за 20 минут до сеанса возле Киносити в Сибирском молле", "54.8479374,82.9584873",
+                "Собираемся за 20 минут до сеанса возле Киносити в Сибирском молле", "55.038864,82.9612697",
                 new ArrayList(Arrays.asList("1")), new ArrayList(Arrays.asList("1")),"1531907100000",
                 "1531915380000"));
         eventCache.put("2", new Event("2",  "1", "MacOSO", "Выходные на природе",
