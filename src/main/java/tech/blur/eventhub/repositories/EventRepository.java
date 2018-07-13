@@ -1,5 +1,6 @@
 package tech.blur.eventhub.repositories;
 
+import tech.blur.eventhub.models.AssignEvent;
 import tech.blur.eventhub.models.Event;
 
 import java.util.ArrayList;
@@ -18,6 +19,8 @@ public interface EventRepository {
   ArrayList<Event> getAssignedEvents(String id);
 
   ArrayList<Event> getEventsByTag(String id);
+
+  Event assignEvent (final AssignEvent assignEvent);
 
   void deleteEvent(String id);
 

@@ -1,6 +1,7 @@
 package tech.blur.eventhub.api;
 
 
+import tech.blur.eventhub.models.AssignEvent;
 import tech.blur.eventhub.models.Event;
 import tech.blur.eventhub.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,6 +62,15 @@ public class EventsController {
   BaseResponse<Event> createEvent(@RequestBody Event event) {
     BaseResponse<Event> response = new BaseResponse<>();
     Event result = service.createEvent(event);
+    response.setData(result);
+    return response;
+  }
+
+  @PostMapping(EVENTS_PATH +"/assign")
+  public @ResponseBody
+  BaseResponse<Event> assignEvent(@RequestBody AssignEvent assignEvent){
+    BaseResponse<Event> response = new BaseResponse<>();
+    Event result = service.assignEvent(assignEvent);
     response.setData(result);
     return response;
   }

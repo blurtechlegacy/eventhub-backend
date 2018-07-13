@@ -1,5 +1,6 @@
 package tech.blur.eventhub.services;
 
+import tech.blur.eventhub.models.AssignEvent;
 import tech.blur.eventhub.models.Event;
 import tech.blur.eventhub.repositories.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +47,10 @@ public class EventService {
 
   public ArrayList<Event> getAssignedEvents(String id) {
     return eventRepository.getAssignedEvents(id);
+  }
+
+  public Event assignEvent (AssignEvent assignEvent){
+    return eventRepository.assignEvent(assignEvent);
   }
 
   public ArrayList<Event> getEventsByTag(String id){

@@ -1,5 +1,6 @@
 package tech.blur.eventhub.repositories;
 
+import tech.blur.eventhub.models.AssignEvent;
 import tech.blur.eventhub.models.Event;
 import org.springframework.stereotype.Repository;
 
@@ -90,6 +91,15 @@ public class InMemoryEventRepository implements EventRepository {
         eventCache.put(event.getId(), event);
         return event;
     }
+
+    public Event assignEvent (final AssignEvent assignEvent){
+
+        if (!eventCache.get(assignEvent.getEvent_id()).getGuests().contains(assignEvent.getUser_id()))
+            eventCache.get(assignEvent.getEvent_id()).getGuests().add(assignEvent.getUser_id());
+
+        return eventCache.get(assignEvent.getEvent_id());
+    }
+
 
     @Override
     public Collection<Event> getAllEvents() {
