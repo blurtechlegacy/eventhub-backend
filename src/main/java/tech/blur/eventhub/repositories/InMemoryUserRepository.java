@@ -17,14 +17,18 @@ public class InMemoryUserRepository implements UserRepository {
     private Map<UserLoginPass, User> userLoginPass = new HashMap<>();
 
     public InMemoryUserRepository() {
-        userCache.put("1", new User("1", "MacOSO", "verystrongpassword", "Alexandr",
+        userCache.put("1", new User("1", "MacOSO", "verystrongpassword", "Саша",
                 "1999-10-26", 1));
-        userCache.put("2", new User("2", "SrgGrch", "qwer2017", "Sergey",
+        userCache.put("2", new User("2", "SrgGrch", "qwer2017", "Серёжа",
                 "1999-09-28", 1));
+        userCache.put("3", new User("3", "erbol", "dinara120454", "Ербол",
+                "1999-11-22", 1));
         userLoginPass.put(new UserLoginPass("MacOSO", "verystrongpassword"), new User("1", "MacOSO",
-                "verystrongpassword", "Alexandr", "1999-10-26", 1));
+                "verystrongpassword", "Саша", "1999-10-26", 1));
         userLoginPass.put(new UserLoginPass("SrgGrch", "qwer2017"),new User("2", "SrgGrch",
-                "qwer2017", "Sergey","1999-09-28", 1));
+                "qwer2017", "Серёжа","1999-09-28", 1));
+        userLoginPass.put(new UserLoginPass("erbol", "dinara120454"),new User("3", "erbol", "dinara120454", "Ербол",
+                "1999-11-22", 1));
     }
 
 
