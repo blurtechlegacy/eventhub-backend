@@ -1,0 +1,115 @@
+FORMAT: 1A
+HOST: 104.41.217.114:1984/api/v001
+
+# Eventhub
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Users Collection [/users]
+
+### List All Users [GET]
+
++ Response 200 (application/json)
+
+        {
+            "status": "OK",
+            "data": [
+                {
+                    "id": "1",
+                    "login": "MacOSO",
+                    "password": "verystrongpassword",
+                    "name": "Alexandr",
+                    "birthday": "1999-10-26",
+                    "sex": 1
+                },
+                {
+                    "id": "2",
+                    "login": "SrgGrch",
+                    "password": "qwer2017",
+                    "name": "Sergey",
+                    "birthday": "1999-09-28",
+                    "sex": 1
+                }
+            ]
+        }
+
+### Get User by Id [GET/users/1]
+
++ Response 200 (application/json)
+
+            {
+                "status": "OK",
+                "data": [
+                    {
+                        "id": "1",
+                        "login": "MacOSO",
+                        "password": "verystrongpassword",
+                        "name": "Alexandr",
+                        "birthday": "1999-10-26",
+                        "sex": 1
+                    }
+                ]
+            }
+
+### Delete User by Id [DELETE/users/4]
+
++ Response 200 (application/json)
+
+            {
+                "status": "OK",
+            }
+        
+### Create a New User [POST]
+
++ Request (application/json)
+
+            {
+                "login": "PedoBear",
+                "password": "iamamainraper",
+                "name": "Ilya",
+                "birthday": "1999-09-28",
+                "sex": 1
+            }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "status": "OK",
+                "data": [
+                        {
+                        "id": "4",
+                        "login": "PedoBear",
+                        "password": "iamamainraper",
+                        "name": "Ilya",
+                        "birthday": "1999-09-28",
+                        "sex": 1
+                    }
+                ]
+            }
+
+### Authentification User [POST/users/auth]
+
++ Request (application/json)
+
+            {
+                "login": "PedoBear",
+                "password": "iamamainraper"
+            }
+
++ Response 201 (application/json)
+
+            {
+                "status": "OK",
+                "data": [
+                        {
+                            "id": "4",
+                            "login": "PedoBear",
+                            "password": "iamamainraper",
+                            "name": "Ilya",
+                            "birthday": "1999-09-28",
+                            "sex": 1
+                    }
+                ]
+            }
