@@ -24,7 +24,7 @@ public class UsersController {
     User user = service.provideUser(id);
 
     if (null == user) {
-      response.setStatus("USER_NOT_EXIST");  //для статусов  можно сделать отдельные Enum-ы или вынести как строковые константы
+      response.setStatus("USER_NOT_EXIST");
       response.setMessage("User not found!");
     } else {
       response.setData(user);
@@ -56,7 +56,7 @@ public class UsersController {
     BaseResponse<User> response = new BaseResponse<>();
     User user = service.authUser(userLoginPass);
     if (null == user) {
-      response.setStatus("USER_NOT_EXIST");  //для статусов  можно сделать отдельные Enum-ы или вынести как строковые константы
+      response.setStatus("USER_NOT_EXIST");
       response.setMessage("Wrong password!");
     } else {
       response.setData(user);
@@ -69,7 +69,7 @@ public class UsersController {
   public @ResponseBody
   BaseResponse deleteUser(@PathVariable String id) {
     service.deleteUser(id);
-    return new BaseResponse(); //нет тела, только статус
+    return new BaseResponse();
   }
 
   @PatchMapping(USERS_PATH + "/{id}")

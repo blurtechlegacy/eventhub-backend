@@ -49,7 +49,7 @@ public class EventsController {
     BaseResponse<ArrayList<Event>> response = new BaseResponse<>();
     ArrayList<Event> result = service.searchEvents(name);
       if (result.isEmpty()) {
-          response.setStatus("EVENT_NOT_EXIST");  //для статусов  можно сделать отдельные Enum-ы или вынести как строковые константы
+          response.setStatus("EVENT_NOT_EXIST");
           response.setMessage("Events not found!");
       } else {
           response.setData(result);
@@ -81,7 +81,7 @@ public class EventsController {
     BaseResponse<ArrayList<Event>> response = new BaseResponse<>();
     ArrayList<Event> result = service.getEventsByUser(host);
     if (result.isEmpty()) {
-      response.setStatus("EVENT_NOT_EXIST");  //для статусов  можно сделать отдельные Enum-ы или вынести как строковые константы
+      response.setStatus("EVENT_NOT_EXIST");
       response.setMessage("Events not found!");
     } else {
       response.setData(result);
@@ -109,7 +109,7 @@ public class EventsController {
     BaseResponse<ArrayList<Event>> response = new BaseResponse<>();
     ArrayList<Event> result = service.getEventsByTag(id);
     if (result.isEmpty()) {
-      response.setStatus("EVENT_NOT_EXIST");  //для статусов  можно сделать отдельные Enum-ы или вынести как строковые константы
+      response.setStatus("EVENT_NOT_EXIST");
       response.setMessage("Events not found!");
     } else {
       response.setData(result);
@@ -120,7 +120,7 @@ public class EventsController {
   public @ResponseBody
   BaseResponse deleteEvent(@PathVariable String id) {
     service.deleteEvent(id);
-    return new BaseResponse(); //нет тела, только статус
+    return new BaseResponse();
   }
 
   @PatchMapping(EVENTS_PATH + "/{id}")

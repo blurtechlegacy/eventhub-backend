@@ -25,7 +25,7 @@ public class TagsController {
     Tag tag = service.provideTag(id);
 
     if (null == tag) {
-      response.setStatus("TAG_NOT_EXIST");  //для статусов  можно сделать отдельные Enum-ы или вынести как строковые константы
+      response.setStatus("TAG_NOT_EXIST");
       response.setMessage("Tag not found!");
     } else {
       response.setData(tag);
@@ -55,7 +55,7 @@ public class TagsController {
   public @ResponseBody
   BaseResponse deleteTag(@PathVariable String id) {
     service.deleteTag(id);
-    return new BaseResponse(); //нет тела, только статус
+    return new BaseResponse();
   }
 
   @PatchMapping(TAGS_PATH + "/{id}")

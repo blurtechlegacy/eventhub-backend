@@ -5,9 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-/**
- * Реализиция, хранящая все данные в памяти приложения
- */
+
 @Repository
 public class InMemoryTagRepository implements TagRepository {
 
